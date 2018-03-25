@@ -20,7 +20,6 @@ export default class Post extends React.Component {
     render() {
         return (
             <View style={[styles.container, {height: this.props.height}]}>
-
                 <ScrollView
                   horizontal
                   style={styles.scrollContainer}
@@ -30,7 +29,7 @@ export default class Post extends React.Component {
                   decelerationRate="fast">
 
                     {/* This is our main title card */}
-                    <View style={[styles.card, styles.title]}>
+                    <View style={styles.card}>
                         <Image
                           style={styles.image}
                           width={CARD_WIDTH}
@@ -41,7 +40,7 @@ export default class Post extends React.Component {
                     </View>
 
                     {/* And this is our one and only comment */}
-                    <View style={[styles.card, styles.comment]}>
+                    <View style={styles.card}>
                         <Text style={styles.text}>{this.props.comment}</Text>
                     </View>
 
