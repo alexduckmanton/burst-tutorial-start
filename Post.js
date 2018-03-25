@@ -19,9 +19,9 @@ const SCROLL_INTERVAL = CARD_WIDTH + CARD_GUTTER_HORIZONTAL;
 export default class Post extends React.Component {
     render() {
         return (
-            <Animated.View style={[styles.container, {height: this.props.height}]}>
+            <View style={[styles.container, {height: this.props.height}]}>
 
-                <Animated.ScrollView
+                <ScrollView
                   horizontal
                   style={styles.scrollContainer}
                   contentContainerStyle={styles.contentContainer}
@@ -41,12 +41,12 @@ export default class Post extends React.Component {
                     </View>
 
                     {/* And this is our one and only comment */}
-                    <Animated.View style={[styles.card, styles.comment]}>
+                    <View style={[styles.card, styles.comment]}>
                         <Text style={styles.text}>{this.props.comment}</Text>
-                    </Animated.View>
+                    </View>
 
-                </Animated.ScrollView>
-            </Animated.View>
+                </ScrollView>
+            </View>
         );
     }
 }
